@@ -15,7 +15,6 @@ export const main = handler(async (event, context) => {
       createdAt: Date.now(), // Current Unix timestamp
     },
   };
-
   await dynamoDb.put(params);
 
   return params.Item;
